@@ -9,14 +9,18 @@ public class Movement : MonoBehaviour
     public float TranslationSpeed = 2;
     public float slowdownFactor = .5f;
     public Transform PlayerSprite;
+    public Rigidbody2D rb; 
 
     void Update()
     {
         if(!PlayerSprite) Debug.LogError("Movement kann PlayerSprite nicht finden.");
-        PlayerSprite.localEulerAngles = new Vector3(0, 0, RotationHardness * -Input.GetAxisRaw("Horizontal"));
-        transform.Rotate(0, 0, Input.GetAxisRaw("Horizontal") * Time.deltaTime * -RotationSpeed);
         float speedCoeff = 1;
+        if(Input.GetAxisRaw("Vertical") != 0f) speedCoeff = slowdownFactor;
+        PlayerSprite.localEulerAngles = new Vector3(0, 0, RotationHardness * -Input.GetAxisRaw("Horizontal") * speedCoeff);
+        rb.AddTorque(Input.GetAxisRaw("Horizontal") * Time.deltaTime * -RotationSpeed * rb.inertia, ForceMode2D.Impulse);
+        speedCoeff = 1;
         if(Input.GetAxisRaw("Horizontal") != 0f | Input.GetAxisRaw("Vertical") < 0f) speedCoeff = slowdownFactor;
-        transform.Translate(Vector3.up * Time.deltaTime * TranslationSpeed * Input.GetAxisRaw("Vertical") * speedCoeff, Camera.main.transform);
+        rb.velocity += (Vector2)(Quaternion.AngleAxis(transform.eulerAngles.z, Vector3.forward) * Vector3.up * Time.fixedDeltaTime
+        * TranslationSpeed * Input.GetAxisRaw("Vertical") * speedCoeff);
     }
 }

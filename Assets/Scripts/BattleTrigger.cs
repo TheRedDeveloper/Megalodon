@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class SceneTrigger : MonoBehaviour
+public class BattleTrigger : MonoBehaviour
 {
     public string sceneName = "Battle";
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene(sceneName);
+        if(other.tag == "Player") SceneManager.LoadScene(sceneName);
     }
 }
