@@ -14,6 +14,8 @@ public class Movement : MonoBehaviour
         if(!PlayerSprite) Debug.LogError("Movement kann PlayerSprite nicht finden.");
         PlayerSprite.localEulerAngles = new Vector3(0, 0, 30 * -Input.GetAxisRaw("Horizontal"));
         transform.Rotate(0, 0, Input.GetAxisRaw("Horizontal") * Time.deltaTime * -RotationSpeed);
-        transform.Translate(Vector3.up * Time.deltaTime * TranslationSpeed * Input.GetAxisRaw("Vertical"), Camera.main.transform);
+        float speedCoeff = 1;
+        if(Input.GetAxisRaw("Horizontal") != 0f | Input.GetAxisRaw("Vertical") < 0f) speedCoeff = 0.5f;
+        transform.Translate(Vector3.up * Time.deltaTime * TranslationSpeed * Input.GetAxisRaw("Vertical") * speedCoeff, Camera.main.transform);
     }
 }
