@@ -294,6 +294,9 @@ MonoBehaviour:
   RotationHardness: 22.5
   slowdownFactor: 0.5
   PlayerSprite: {fileID: 1601032847}
+  projectile: {fileID: 2400864758817018103, guid: 3d18266f175300c4a858d75180184de2, type: 3}
+  shootCool: 0.5
+  recoilStrength: 0.1
 --- !u!4 &734955778
 Transform:
   m_ObjectHideFlags: 0
