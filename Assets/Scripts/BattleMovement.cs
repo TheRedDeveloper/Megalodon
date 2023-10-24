@@ -29,8 +29,9 @@ public class BattleMovement : MonoBehaviour
         rb.velocity += Vector2.up * Time.deltaTime * VerticalSpeed *  Input.GetAxisRaw("Vertical") * speedCoeff;
         sinceShot += Time.deltaTime;
         if (Input.GetButtonDown("Fire1") && sinceShot > shootCool) {
-            Instantiate(projectile, transform.position, transform.rotation);
+            Instantiate(projectile, transform.position+new Vector3(1,0,0), Quaternion.FromToRotation(Vector3.up, Vector3.right));
             rb.velocity += Vector2.left * recoilStrength;
+            sinceShot = 0;
         }
     }
 }

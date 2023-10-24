@@ -14,7 +14,6 @@ public class BattleTrigger : MonoBehaviour
             Game.currentScene = "Battle";
             Game.mapPosition = exitPoint.position;
             Game.boss = boss;
-            Game.HP = new int[]{100, 220, 480}[Game.level]; //TODO: !!!!!!!!
             SceneManager.LoadScene("Battle");
         }
     }
