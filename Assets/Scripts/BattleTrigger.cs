@@ -6,9 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class BattleTrigger : MonoBehaviour
 {
-    public string sceneName = "Battle";
+    public Transform exitPoint;
+    public GameObject boss;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player") SceneManager.LoadScene(sceneName);
+        if(other.tag == "Player"){
+            Game.currentScene = "Battle";
+            Game.mapPosition = exitPoint.position;
+            Game.boss = boss;
+            Game.HP = new int[]{100, 220, 480}[Game.level]; //TODO: !!!!!!!!
+            SceneManager.LoadScene("Battle");
+        }
     }
 }
