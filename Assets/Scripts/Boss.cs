@@ -12,6 +12,7 @@ public class Boss : MonoBehaviour
     public float recoilStrength = .1f;
     public Vector3 offsetToPlayer;
     public GameObject projectile;
+    public Vector3 projectileOffset;
     public Rigidbody2D rb;
 
     float sinceShot;
@@ -23,7 +24,7 @@ public class Boss : MonoBehaviour
     {
         sinceShot += Time.deltaTime;
         if(sinceShot > shootCool){
-            Instantiate(projectile, transform.position+new Vector3(-1, 0, 0), Quaternion.FromToRotation(Vector3.up, Vector3.left) * Quaternion.Euler(0, 0, Random.Range(-10, 10)));
+            Instantiate(projectile, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.left) * Quaternion.Euler(0, 0, Random.Range(-10, 10)));
             rb.velocity += Vector2.right * recoilStrength;
             sinceShot = 0;
         }

@@ -13,6 +13,7 @@ public class BattleMovement : MonoBehaviour
     public GameObject projectile;
     public float shootCool = .5f;
     public float recoilStrength = .1f;
+    public Vector3 projectileOffset;
     public Rigidbody2D rb; 
 
     float sinceShot;
@@ -29,7 +30,7 @@ public class BattleMovement : MonoBehaviour
         rb.velocity += Vector2.up * Time.deltaTime * VerticalSpeed *  Input.GetAxisRaw("Vertical") * speedCoeff;
         sinceShot += Time.deltaTime;
         if (Input.GetButtonDown("Fire1") && sinceShot > shootCool) {
-            Instantiate(projectile, transform.position+new Vector3(1,0,0), Quaternion.FromToRotation(Vector3.up, Vector3.right));
+            Instantiate(projectile, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.right));
             rb.velocity += Vector2.left * recoilStrength;
             sinceShot = 0;
         }
