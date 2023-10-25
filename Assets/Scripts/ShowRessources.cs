@@ -14,9 +14,9 @@ public class ShowRessources : MonoBehaviour
     public TMP_Text gunpowder;
     public TMP_Text gunpowderR;
 
-    public int[] requiredMetal = {20, 40, 50};
-    public int[] requiredOil = {2, 5, 10};
-    public int[] requiredGunpowder = {10, 30, 60};
+    public static int[] requiredMetal = {20, 40, 50};
+    public static int[] requiredOil = {2, 5, 10};
+    public static int[] requiredGunpowder = {10, 30, 60};
 
     void Update()
     {

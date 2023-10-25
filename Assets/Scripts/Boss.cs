@@ -23,7 +23,7 @@ public class Boss : MonoBehaviour
     void Update()
     {
         sinceShot += Time.deltaTime;
-        if(sinceShot > shootCool){
+        if(sinceShot > shootCool && shootCool != 0){
             Instantiate(projectile, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.left) * Quaternion.Euler(0, 0, Random.Range(-10, 10)));
             rb.velocity += Vector2.right * recoilStrength;
             sinceShot = 0;

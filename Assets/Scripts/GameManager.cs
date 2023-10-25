@@ -7,6 +7,8 @@ public static class Game
     public static GameObject boss { get; set; }
     public static float HP { get; set; }
     public static int level { get; set; }
+    public static bool[] isBossDead { get; set; }
+    public static int bossId { get; set; }
     // public static float maxHP { get {return new int[]{100, 220, 480}[Game.level];} } // TODO: Umbedingt erweitern
 }
 

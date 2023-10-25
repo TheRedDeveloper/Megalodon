@@ -26,7 +26,10 @@ public class BattleManager : MonoBehaviour
             Resources.metal += 2;
             Resources.oil += 3;
             Resources.gunpowder += 10;
+            if(Resources.metal>=ShowRessources.requiredMetal[Game.level] && Resources.oil>=ShowRessources.requiredOil[Game.level] && Resources.gunpowder>=ShowRessources.requiredGunpowder[Game.level])
+                Game.level += 1;
             Debug.Log("YOU WIN!!!");
+            Game.isBossDead[Game.bossId] = true;
             Game.currentScene = "Map";
             SceneManager.LoadScene("Map");
         }
