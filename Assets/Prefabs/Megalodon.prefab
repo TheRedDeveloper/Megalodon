@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 40
   mHP: 40
-  speed: 10
+  speed: 15
   minDistance: 0.1
   givesMetal: 10
   givesOil: 10
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 6466727814706007430}
-  damage: 2
+  damage: 3
   back: {x: 10, y: 0, z: 0}
   minDistance: 1.7
   minDistanceOff: 1
