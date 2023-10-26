@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public static class Game
 {
@@ -10,6 +12,7 @@ public static class Game
     public static bool[] isBossDead { get; set; }
     public static int bossId { get; set; }
     public static int shipwreckId { get; set; }
+    public static List<int>[] openedChests { get; set; }
 }
 
 public static class Resources {
