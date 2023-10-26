@@ -16,6 +16,7 @@ public class BattleMovement : MonoBehaviour
     public float shootCool2 = .5f;
     public float recoilStrength = .1f;
     public float recoilStrength2 = .2f;
+    public static bool paused = false;
     public Vector3 projectileOffset;
     public Rigidbody2D rb;
 
@@ -31,23 +32,25 @@ public class BattleMovement : MonoBehaviour
     }
     void Update()
     {
-        if(!PlayerSprite) Debug.LogError("Movement kann PlayerSprite nicht finden.");
-        float speedCoeff = 1; if(Input.GetAxisRaw("Vertical") != 0f | Input.GetAxisRaw("Horizontal") < 0f) speedCoeff = slowdownFactor;
-        rb.velocity += Vector2.right * Time.deltaTime * (HorizontalSpeed+Game.level) *  Input.GetAxisRaw("Horizontal") * speedCoeff;
-        speedCoeff = 1; if(Input.GetAxisRaw("Horizontal") != 0f) speedCoeff = slowdownFactor;
-        PlayerSprite.localEulerAngles = new Vector3(0, 0, RotationHardness * Input.GetAxisRaw("Vertical") * speedCoeff);
-        rb.velocity += Vector2.up * Time.deltaTime * (VerticalSpeed+Game.level) *  Input.GetAxisRaw("Vertical") * speedCoeff;
-        sinceShot += Time.deltaTime;
-        sinceShot2 += Time.deltaTime;
-        if (Input.GetButtonDown("Fire1") && sinceShot > shootCool[Game.level]) {
-            Instantiate(projectile, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.right));
-            rb.velocity += Vector2.left * recoilStrength;
-            sinceShot = 0;
-        }
-        if (Game.level >= 2 && Input.GetButton("Fire2") && sinceShot2 > shootCool2) {
-            Instantiate(projectile2, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.right));
-            rb.velocity += Vector2.left * recoilStrength2;
-            sinceShot2 = 0;
+        if(!paused) {
+            if(!PlayerSprite) Debug.LogError("Movement kann PlayerSprite nicht finden.");
+            float speedCoeff = 1; if(Input.GetAxisRaw("Vertical") != 0f | Input.GetAxisRaw("Horizontal") < 0f) speedCoeff = slowdownFactor;
+            rb.velocity += Vector2.right * Time.deltaTime * (HorizontalSpeed+Game.level) *  Input.GetAxisRaw("Horizontal") * speedCoeff;
+            speedCoeff = 1; if(Input.GetAxisRaw("Horizontal") != 0f) speedCoeff = slowdownFactor;
+            PlayerSprite.localEulerAngles = new Vector3(0, 0, RotationHardness * Input.GetAxisRaw("Vertical") * speedCoeff);
+            rb.velocity += Vector2.up * Time.deltaTime * (VerticalSpeed+Game.level) *  Input.GetAxisRaw("Vertical") * speedCoeff;
+            sinceShot += Time.deltaTime;
+            sinceShot2 += Time.deltaTime;
+            if (Input.GetButtonDown("Fire1") && sinceShot > shootCool[Game.level]) {
+                Instantiate(projectile, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.right));
+                rb.velocity += Vector2.left * recoilStrength;
+                sinceShot = 0;
+            }
+            if (Game.level >= 2 && Input.GetButton("Fire2") && sinceShot2 > shootCool2) {
+                Instantiate(projectile2, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.right));
+                rb.velocity += Vector2.left * recoilStrength2;
+                sinceShot2 = 0;
+            }
         }
     }
 }

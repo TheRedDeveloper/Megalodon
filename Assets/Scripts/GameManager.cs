@@ -2,8 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public static class Game
-{
+public static class Game {
     public static string currentScene { get; set; }
     public static Vector3? mapPosition { get; set; }
     public static GameObject boss { get; set; }
