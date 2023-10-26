@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shipwreck0.unity
     guid: f36ace96969c24c119e59b1193844d3d
+  - enabled: 1
+    path: Assets/Scenes/Shipwreck1.unity
+    guid: f26518ea58f7b40b8be157e52b0b5f4c
   m_configObjects: {}
