@@ -11,10 +11,6 @@ public class Movement : MonoBehaviour
     public Transform PlayerSprite;
     public Rigidbody2D rb; 
 
-    void Start() {
-        if(Game.mapPosition != null) transform.position = (Vector3)Game.mapPosition;
-    }
-
     void Update()
     {
         if(!PlayerSprite) Debug.LogError("Movement kann PlayerSprite nicht finden.");
