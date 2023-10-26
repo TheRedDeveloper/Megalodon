@@ -217,10 +217,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c2387dc49a3c742af205b601d2bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 7
-  mHP: 7
-  speed: 5
+  HP: 40
+  mHP: 40
+  speed: 10
   minDistance: 0.1
+  givesMetal: 10
+  givesOil: 10
+  givesGunpowder: 10
   shootCool: 0
   recoilStrength: 0
   offsetToPlayer: {x: -10, y: 0, z: 0}
@@ -456,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 6466727814706007430}
-  damage: 1
+  damage: 2
   back: {x: 10, y: 0, z: 0}
   minDistance: 1.7
   minDistanceOff: 1

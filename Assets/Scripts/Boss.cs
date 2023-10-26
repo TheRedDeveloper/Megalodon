@@ -8,6 +8,9 @@ public class Boss : MonoBehaviour
     public float mHP;
     public float speed;
     public float minDistance;
+    public int givesMetal;
+    public int givesOil;
+    public int givesGunpowder;
     public float shootCool = .5f;
     public float recoilStrength = .1f;
     public Vector3 offsetToPlayer;
