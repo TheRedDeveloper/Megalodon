@@ -10,15 +10,10 @@ public static class Game
     public static bool[] isBossDead { get; set; }
     public static int bossId { get; set; }
     public static int shipwreckId { get; set; }
-    public static GameObject shipwreck { get; set; }
-    // public static float maxHP { get {return new int[]{100, 220, 480}[Game.level];} } // TODO: Umbedingt erweitern
 }
 
 public static class Resources {
     public static int metal { get; set; }
     public static int oil { get; set; }
     public static int gunpowder { get; set; }
-    // public static int requiredMetal { get { return new int[]{20, 40, 50}[Game.level]; } } // TODO: Umbedingt erweitern
-    // public static int requiredGunpowder { get { return new int[]{10, 30, 60}[Game.level]; } } // TODO: Umbedingt erweitern
-    // public static int requiredOil { get { return new int[]{2, 5, 10}[Game.level]; } } // TODO: Umbedingt erweitern
 }
