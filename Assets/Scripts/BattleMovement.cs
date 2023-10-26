@@ -20,9 +20,19 @@ public class BattleMovement : MonoBehaviour
     public Vector3 projectileOffset;
     public Rigidbody2D rb;
 
+    public Sprite spriteL2;
+    public SpriteRenderer spriteRenderer;
+    public PolygonCollider2D colliderL1;
+    public PolygonCollider2D colliderL2;
+
     float sinceShot;
     float sinceShot2;
     void Start() {
+        if(Game.level >= 1) {
+            spriteRenderer.sprite = spriteL2;
+            colliderL1.enabled = false;
+            colliderL2.enabled = true;
+        }
         if(Game.level>=1) {
             Camera.main.orthographicSize = 10;
             Camera.main.transform.position = new Vector3(15,0,-10);

@@ -10,7 +10,8 @@ public class Chest : MonoBehaviour {
     public int chestId;
 
     void Start(){
-        if(Game.openedChests == null) Game.openedChests = Enumerable.Repeat(new List<int>(){}, 4).ToArray();
+        if(Game.openedChests == null) Game.openedChests = new List<int>[]{new List<int>(){}, new List<int>(){}};
+        Debug.Log(Game.openedChests[Game.shipwreckId]);
         if(Game.openedChests[Game.shipwreckId].Contains(chestId)) gameObject.SetActive(false);
     }
     void OnTriggerEnter2D(Collider2D other){
@@ -18,6 +19,7 @@ public class Chest : MonoBehaviour {
             Resources.metal += givesMetal;
             Resources.oil += givesOil;
             Resources.gunpowder += givesGunpowder;
+            
             Game.openedChests[Game.shipwreckId].Add(chestId);
             gameObject.SetActive(false);
         }

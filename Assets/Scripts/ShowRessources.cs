@@ -31,6 +31,7 @@ public class ShowRessources : MonoBehaviour
                 Resources.metal = 0;
                 Resources.oil = 0;
                 Resources.gunpowder = 0;
+                FindObjectsOfType<Movement>()[0].refreshSprite();
             }
         } else {
             metal.text = Resources.metal.ToString();

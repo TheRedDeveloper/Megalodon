@@ -49,6 +49,7 @@ public class BattleManager : MonoBehaviour
         Resources.metal = 0;
         Resources.oil = 0;
         Resources.gunpowder = 0;
+        BattleMovement.paused = false;
         Game.currentScene = "Map";
         SceneManager.LoadScene("Map");
     }
