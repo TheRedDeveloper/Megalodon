@@ -3346,7 +3346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitPoint: {fileID: 1869953663}
-  boss: {fileID: 1515655773053816369, guid: 45b32d6c1f83f494fbe2a6b6580d0661, type: 3}
+  boss: {fileID: 1515655773053816369, guid: 2d4382b2f3ef18b46b729b255e2c4d9e, type: 3}
   bossId: 3
 --- !u!61 &603362503
 BoxCollider2D:
@@ -5927,7 +5927,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f6bf5665b4b4e714e8737d1a80dc275a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb550a68d0ca2f24e82859c6110f891a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
