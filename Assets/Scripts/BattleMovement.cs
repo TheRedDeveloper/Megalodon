@@ -27,6 +27,8 @@ public class BattleMovement : MonoBehaviour
 
     float sinceShot;
     float sinceShot2;
+
+    public bool isMoving = false;
     void Start() {
         if(Game.level >= 1) {
             spriteRenderer.sprite = spriteL2;
@@ -43,6 +45,7 @@ public class BattleMovement : MonoBehaviour
     void Update()
     {
         if(!paused) {
+            isMoving = Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f;
             if(!PlayerSprite) Debug.LogError("Movement kann PlayerSprite nicht finden.");
             float speedCoeff = 1; if(Input.GetAxisRaw("Vertical") != 0f | Input.GetAxisRaw("Horizontal") < 0f) speedCoeff = slowdownFactor;
             rb.velocity += Vector2.right * Time.deltaTime * (HorizontalSpeed+Game.level) *  Input.GetAxisRaw("Horizontal") * speedCoeff;

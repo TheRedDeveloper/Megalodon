@@ -13,11 +13,13 @@ public class Movement : MonoBehaviour {
     public PolygonCollider2D colliderL2;
     public Transform PlayerSprite;
     public Rigidbody2D rb; 
+    public bool isMoving = false;
 
     void Start(){
         refreshSprite();
     }
     void Update(){
+        isMoving = Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f;
         if(!PlayerSprite) Debug.LogError("Movement kann PlayerSprite nicht finden.");
         float speedCoeff = 1;
         if(Input.GetAxisRaw("Vertical") != 0f) speedCoeff = slowdownFactor;
