@@ -135,9 +135,9 @@ MonoBehaviour:
   mHP: 12
   speed: 7
   minDistance: 0.1
-  givesMetal: 3
-  givesOil: 4
-  givesGunpowder: 5
+  givesMetal: 5
+  givesOil: 6
+  givesGunpowder: 7
   shootCool: 0.4
   recoilStrength: 0.2
   offsetToPlayer: {x: 15, y: 0, z: 0}
