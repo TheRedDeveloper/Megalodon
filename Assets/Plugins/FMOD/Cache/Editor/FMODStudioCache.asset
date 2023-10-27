@@ -1,5 +1,262 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8105108308443341593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ML_Damaged_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/ML_Damaged_Sound
+  Guid:
+    Data1: 53069184
+    Data2: 1229068207
+    Data3: 1997896587
+    Data4: -1006526985
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8061277385083218669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UB_Loop
+  m_EditorClassIdentifier: 
+  Path: event:/UB_Loop
+  Guid:
+    Data1: -506864624
+    Data2: 1203042572
+    Data3: 319501961
+    Data4: 708499019
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3159975671745944544}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16097
+--- !u!114 &-7547040716807997081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638340110302786333
+  FileSizes:
+  - Name: Desktop
+    Value: 1336
+  Exists: 1
+--- !u!114 &-6647835290843323178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UB_WooshWeapon_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/UB_WooshWeapon_Sound
+  Guid:
+    Data1: 1146225190
+    Data2: 1323913285
+    Data3: 1210817176
+    Data4: -1237898012
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 480
+--- !u!114 &-6402437612727756711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelState
+  m_EditorClassIdentifier: 
+  Name: LevelState
+  StudioPath: parameter:/LevelState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 2213558642
+    data2: 975843758
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - UW
+  - SW
+  - BA
+  - BB
+  Exists: 1
+--- !u!114 &-5598429905871205811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerLevel
+  m_EditorClassIdentifier: 
+  Name: PlayerLevel
+  StudioPath: parameter:/PlayerLevel
+  Min: 1
+  Max: 2
+  Default: 1
+  ID:
+    data1: 1711101811
+    data2: 164157271
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-4854790817487493198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BG_Loop/LevelState
+  m_EditorClassIdentifier: 
+  Name: LevelState
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 2213558642
+    data2: 975843758
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - UW
+  - SW
+  - BA
+  - BB
+  Exists: 1
+--- !u!114 &-4200161945832366747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638340110302705846
+  FileSizes:
+  - Name: Desktop
+    Value: 2847648
+  Exists: 1
+--- !u!114 &-2873049590525538252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BG_Loop
+  m_EditorClassIdentifier: 
+  Path: event:/BG_Loop
+  Guid:
+    Data1: 1802655658
+    Data2: 1323427089
+    Data3: 97056422
+    Data4: -1463842914
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4854790817487493198}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 22462
+--- !u!114 &-858251175908495502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UB_CriticalLife_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/UB_CriticalLife_Sound
+  Guid:
+    Data1: 2078728778
+    Data2: 1234256226
+    Data3: 1584996542
+    Data4: 338101445
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +269,239 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
-  EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  EditorBanks:
+  - {fileID: -7547040716807997081}
+  - {fileID: -4200161945832366747}
+  EditorEvents:
+  - {fileID: -8061277385083218669}
+  - {fileID: -6647835290843323178}
+  - {fileID: -858251175908495502}
+  - {fileID: 142408575672480393}
+  - {fileID: -8105108308443341593}
+  - {fileID: 8498614377787802047}
+  - {fileID: 6206709591789808195}
+  - {fileID: -2873049590525538252}
+  - {fileID: 2402530333600106754}
+  - {fileID: 7479202684515102430}
+  EditorParameters:
+  - {fileID: -5598429905871205811}
+  - {fileID: -6402437612727756711}
+  MasterBanks:
+  - {fileID: -4200161945832366747}
+  StringsBanks:
+  - {fileID: -7547040716807997081}
+  cacheTime: 638340110302786333
   cacheVersion: 131608
+--- !u!114 &142408575672480393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SH_Bubble_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/SH_Bubble_Sound
+  Guid:
+    Data1: 573265240
+    Data2: 1276980712
+    Data3: 344638596
+    Data4: -1683578605
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2256771396405806700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/LevelState
+  m_EditorClassIdentifier: 
+  Name: LevelState
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 2213558642
+    data2: 975843758
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - UW
+  - SW
+  - BA
+  - BB
+  Exists: 1
+--- !u!114 &2402530333600106754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ML_Roar_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/ML_Roar_Sound
+  Guid:
+    Data1: -1488193356
+    Data2: 1215382443
+    Data3: -929553024
+    Data4: -877328092
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3159975671745944544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UB_Loop/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2426027127
+    data2: 834803783
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6206709591789808195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ML_Attack_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/ML_Attack_Sound
+  Guid:
+    Data1: 1866457245
+    Data2: 1140368895
+    Data3: 834209197
+    Data4: -1755430941
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 371
+--- !u!114 &7479202684515102430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UB_Damage_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/UB_Damage_Sound
+  Guid:
+    Data1: -1508570176
+    Data2: 1118146218
+    Data3: 1860025007
+    Data4: -573122797
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8498614377787802047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: 101267095
+    Data2: 1078181887
+    Data3: -280234568
+    Data4: -424622705
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2256771396405806700}
+  - {fileID: 9086887731514014432}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &9086887731514014432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/PlayerLevel
+  m_EditorClassIdentifier: 
+  Name: PlayerLevel
+  StudioPath: 
+  Min: 1
+  Max: 2
+  Default: 1
+  ID:
+    data1: 1711101811
+    data2: 164157271
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1

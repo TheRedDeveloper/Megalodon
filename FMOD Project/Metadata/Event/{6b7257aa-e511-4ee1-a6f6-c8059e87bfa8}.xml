@@ -246,7 +246,7 @@
 			<value>22.462645833333333</value>
 		</property>
 		<property name="spawnRate">
-			<value>4</value>
+			<value>10</value>
 		</property>
 		<property name="minimumScatterDistance">
 			<value>15</value>
@@ -350,6 +350,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{776c8d75-0c28-4f21-914b-00a27d2f1ec6}">
 		<relationship name="effects">
+			<destination>{8b51d57a-b733-4c04-9a0b-6d0f83bed435}</destination>
 			<destination>{5125a2d1-f958-47f1-a1a5-ccc5a7826e8f}</destination>
 		</relationship>
 	</object>
@@ -392,6 +393,14 @@
 			<destination>{c1d52084-4cb2-4dd1-97b3-b29e03dd1e35}</destination>
 			<destination>{8ad7df8c-80c4-4a2f-bad9-c8be01329317}</destination>
 		</relationship>
+	</object>
+	<object class="SFXReverbEffect" id="{8b51d57a-b733-4c04-9a0b-6d0f83bed435}">
+		<property name="wetLevel">
+			<value>-14.5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-7</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{5125a2d1-f958-47f1-a1a5-ccc5a7826e8f}" />
 	<object class="AutomationPoint" id="{aec5a8cd-fb06-439d-8410-f02bbf6668d7}">
