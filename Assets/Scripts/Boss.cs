@@ -29,6 +29,7 @@ public class Boss : MonoBehaviour
         if(sinceShot > shootCool && shootCool != 0){
             Instantiate(projectile, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.left) * Quaternion.Euler(0, 0, Random.Range(-10, 10)));
             rb.velocity += Vector2.right * recoilStrength;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SH_Bubble_Sound");
             sinceShot = 0;
         }
     }

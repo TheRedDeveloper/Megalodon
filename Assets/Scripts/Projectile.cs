@@ -21,8 +21,23 @@ public class Projectile : MonoBehaviour
     {
         if(lifeTime > 0.01) {
             Debug.Log(col.gameObject.name);
-            if(col.gameObject.tag == "Player") Game.HP -= damage;
-            if(col.gameObject.tag == "Boss") Game.boss.GetComponentInChildren<Boss>().HP -= damage;
+            if(col.gameObject.tag == "Player") 
+            {
+                Game.HP -= damage;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/UB_Damage_Sound");
+            }
+            if(col.gameObject.tag == "Boss") 
+            {
+                Game.boss.GetComponentInChildren<Boss>().HP -= damage;
+                if(Game.bossId == 6)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/ML_Damaged_Sound");
+                }
+                else
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/ML_Damaged_Sound");
+                }
+            }
             Destroy(gameObject);
         }
     }

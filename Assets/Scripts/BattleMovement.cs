@@ -34,8 +34,6 @@ public class BattleMovement : MonoBehaviour
             spriteRenderer.sprite = spriteL2;
             colliderL1.enabled = false;
             colliderL2.enabled = true;
-        }
-        if(Game.level>=1) {
             Camera.main.orthographicSize = 10;
             Camera.main.transform.position = new Vector3(15,0,-10);
         }
@@ -58,11 +56,13 @@ public class BattleMovement : MonoBehaviour
                 Instantiate(projectile, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.right));
                 rb.velocity += Vector2.left * recoilStrength;
                 sinceShot = 0;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/UB_WooshWeapon_Sound");
             }
             if (Game.level >= 2 && Input.GetButton("Fire2") && sinceShot2 > shootCool2) {
                 Instantiate(projectile2, transform.position+projectileOffset, Quaternion.FromToRotation(Vector3.up, Vector3.right));
                 rb.velocity += Vector2.left * recoilStrength2;
                 sinceShot2 = 0;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/UB_WooshWeapon_Sound");
             }
         }
     }

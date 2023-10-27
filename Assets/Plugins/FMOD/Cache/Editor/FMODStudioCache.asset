@@ -70,7 +70,7 @@ MonoBehaviour:
   Path: FMOD Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638340120124753067
+  lastModified: 638340170830345939
   FileSizes:
   - Name: Desktop
     Value: 1336
@@ -144,9 +144,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: PlayerLevel
   StudioPath: parameter:/PlayerLevel
-  Min: 1
+  Min: 0
   Max: 2
-  Default: 1
+  Default: 0
   ID:
     data1: 1711101811
     data2: 164157271
@@ -197,10 +197,10 @@ MonoBehaviour:
   Path: FMOD Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638340120124743064
+  lastModified: 638340170830266149
   FileSizes:
   - Name: Desktop
-    Value: 2847648
+    Value: 2847680
   Exists: 1
 --- !u!114 &-2873049590525538252
 MonoBehaviour:
@@ -290,7 +290,7 @@ MonoBehaviour:
   - {fileID: -4200161945832366747}
   StringsBanks:
   - {fileID: -7547040716807997081}
-  cacheTime: 638340120124753067
+  cacheTime: 638340170830345939
   cacheVersion: 131608
 --- !u!114 &142408575672480393
 MonoBehaviour:
@@ -495,9 +495,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: PlayerLevel
   StudioPath: 
-  Min: 1
+  Min: 0
   Max: 2
-  Default: 1
+  Default: 0
   ID:
     data1: 1711101811
     data2: 164157271

@@ -11,6 +11,8 @@ public class BattleManager : MonoBehaviour
     public GameObject _player;
     public static GameObject player;
     public GameObject gameOver;
+
+    private bool isCritical = false;
     
     int mHP;
     void Awake() {
@@ -36,6 +38,18 @@ public class BattleManager : MonoBehaviour
             Debug.Log("YOU LOOSE!!!");
             BattleMovement.paused = true;
             gameOver.SetActive(true);
+        }
+        if(Game.HP <= mHP/100*30)
+            {
+                if(!isCritical)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/UB_CritcalLife_Sound");
+                    isCritical = true;
+                }
+            }
+        else
+        {
+            isCritical = true;
         }
     }
 

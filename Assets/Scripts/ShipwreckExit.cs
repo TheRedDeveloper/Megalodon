@@ -9,6 +9,7 @@ public class ShipwreckExit : MonoBehaviour
         Debug.Log("EXIT");
         if(other.tag == "Player") {
             SceneManager.LoadScene("Map");
+            Game.currentScene = 0;
         }
     }
 }

@@ -14,8 +14,13 @@ public class EndBoss : MonoBehaviour
         if(Vector3.Distance(transform.position,BattleManager.player.transform.position)<minDistance){
             boss.offsetToPlayer = back;
             Debug.Log(tookDmg);
-            if(!tookDmg) Game.HP -= damage;
-            tookDmg = true;
+            if(!tookDmg) 
+            {
+                Game.HP -= damage;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/ML_Attack_Sound");
+                FMODUnity.RuntimeManager.PlayOneShot("event:/ML_Roar_Sound");
+            }
+            tookDmg = true;            
         }
         if(Vector3.Distance(transform.position,BattleManager.player.transform.position+back)<minDistance-minDistanceOff) {
             tookDmg = false;
