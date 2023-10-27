@@ -20,7 +20,6 @@ public class Projectile : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         if(lifeTime > 0.01) {
-            Debug.Log(col.gameObject.name);
             if(col.gameObject.tag == "Player") 
             {
                 Game.HP -= damage;

@@ -29,13 +29,11 @@ public class BattleManager : MonoBehaviour
             Resources.metal += Game.boss.GetComponentInChildren<Boss>().givesMetal;
             Resources.oil += Game.boss.GetComponentInChildren<Boss>().givesOil;
             Resources.gunpowder += Game.boss.GetComponentInChildren<Boss>().givesGunpowder;
-            Debug.Log("YOU WIN!!!");
             Game.isBossDead[Game.bossId] = true;
             Game.currentScene = 0;
             SceneManager.LoadScene("Map");
         }
         if (Game.HP <= 0) {
-            Debug.Log("YOU LOOSE!!!");
             BattleMovement.paused = true;
             gameOver.SetActive(true);
         }

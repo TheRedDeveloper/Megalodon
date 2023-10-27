@@ -14,7 +14,6 @@ public class Chest : MonoBehaviour {
 
     void Start(){
         if(Game.openedChests == null) Game.openedChests = new List<int>[]{new List<int>(){}, new List<int>(){}};
-        Debug.Log(Game.openedChests[Game.shipwreckId]);
         if(Game.openedChests[Game.shipwreckId].Contains(chestId)){
             collider.enabled = false;
             sr.sprite = openedChest;

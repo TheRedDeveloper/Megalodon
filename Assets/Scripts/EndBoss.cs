@@ -13,7 +13,6 @@ public class EndBoss : MonoBehaviour
     void Update(){
         if(Vector3.Distance(transform.position,BattleManager.player.transform.position)<minDistance){
             boss.offsetToPlayer = back;
-            Debug.Log(tookDmg);
             if(!tookDmg) 
             {
                 Game.HP -= damage;

@@ -26,7 +26,6 @@ public class Movement : MonoBehaviour {
         instance.start();
     }
     void OnDestroy(){
-        Debug.Log("DESTROY");
         instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         instance.release();
     }
