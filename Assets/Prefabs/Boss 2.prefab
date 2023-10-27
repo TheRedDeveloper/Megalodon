@@ -131,18 +131,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c2387dc49a3c742af205b601d2bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 7
-  mHP: 7
-  speed: 5
+  HP: 12
+  mHP: 12
+  speed: 7
   minDistance: 0.1
   givesMetal: 3
   givesOil: 4
   givesGunpowder: 5
-  shootCool: 0.3
+  shootCool: 0.4
   recoilStrength: 0.2
-  offsetToPlayer: {x: 7, y: 0, z: 0}
+  offsetToPlayer: {x: 15, y: 0, z: 0}
   projectile: {fileID: 2400864758817018103, guid: c2139ddae0ccb474e9fc860261bba8cc, type: 3}
-  projectileOffset: {x: -5, y: 0, z: 0}
+  projectileOffset: {x: -4.8, y: 0, z: 0}
   rb: {fileID: 4227959405280880580}
 --- !u!50 &4227959405280880580
 Rigidbody2D:
@@ -157,7 +157,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 0.001
   m_Material: {fileID: 0}
