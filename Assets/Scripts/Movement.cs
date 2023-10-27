@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour {
     public PolygonCollider2D colliderL1;
     public PolygonCollider2D colliderL2;
     public Transform PlayerSprite;
-    public Rigidbody2D rb; 
+    public Rigidbody2D rb;
     public bool isMoving = false;
     private bool soundIsPlaying = false;
     private FMOD.Studio.EventInstance instance;
