@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e3b9bf27-cd54-4752-a53b-df15ba187ce5}">
+		<property name="assetPath">
+			<value>FertigeSounds/UW_BG_Loop.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>22.462645833333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f06235de-a6a1-4dc0-b126-8f7fcc352af1}</destination>
+		</relationship>
+	</object>
+</objects>

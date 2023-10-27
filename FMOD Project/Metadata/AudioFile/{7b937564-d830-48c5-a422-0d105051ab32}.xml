@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7b937564-d830-48c5-a422-0d105051ab32}">
+		<property name="assetPath">
+			<value>FertigeSounds/UB_Critical-Life_Sound.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>22.0499992</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.3790929705215418</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f06235de-a6a1-4dc0-b126-8f7fcc352af1}</destination>
+		</relationship>
+	</object>
+</objects>

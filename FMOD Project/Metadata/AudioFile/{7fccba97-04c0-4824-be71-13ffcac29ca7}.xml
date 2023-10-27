@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7fccba97-04c0-4824-be71-13ffcac29ca7}">
+		<property name="assetPath">
+			<value>FertigeSounds/ML_Roar_Sound.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.444897959183673</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f06235de-a6a1-4dc0-b126-8f7fcc352af1}</destination>
+		</relationship>
+	</object>
+</objects>

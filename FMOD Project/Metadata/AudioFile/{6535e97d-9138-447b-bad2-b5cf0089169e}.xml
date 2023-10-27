@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6535e97d-9138-447b-bad2-b5cf0089169e}">
+		<property name="assetPath">
+			<value>FertigeSounds/UB_WooshWeapon_Sound.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.47999999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f06235de-a6a1-4dc0-b126-8f7fcc352af1}</destination>
+		</relationship>
+	</object>
+</objects>
