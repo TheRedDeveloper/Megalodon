@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 12
   mHP: 12
-  speed: 7
+  speed: 4
   minDistance: 0.1
   givesMetal: 5
   givesOil: 6
