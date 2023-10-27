@@ -16,7 +16,7 @@ public class BattleTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player"){
-            Game.currentScene = "Battle";
+            Game.currentScene = 2;
             Game.bossId = bossId;
             Game.mapPosition = exitPoint.position;
             Game.boss = boss;

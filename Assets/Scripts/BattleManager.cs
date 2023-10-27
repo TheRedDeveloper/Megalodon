@@ -29,7 +29,7 @@ public class BattleManager : MonoBehaviour
             Resources.gunpowder += Game.boss.GetComponentInChildren<Boss>().givesGunpowder;
             Debug.Log("YOU WIN!!!");
             Game.isBossDead[Game.bossId] = true;
-            Game.currentScene = "Map";
+            Game.currentScene = 0;
             SceneManager.LoadScene("Map");
         }
         if (Game.HP <= 0) {
@@ -42,7 +42,6 @@ public class BattleManager : MonoBehaviour
     public void Restart(){
         Game.openedChests = null;
         Game.level = 0;
-        Game.currentScene = null;
         Game.mapPosition = null;
         Game.boss = null;
         Game.isBossDead = null;
@@ -50,7 +49,7 @@ public class BattleManager : MonoBehaviour
         Resources.oil = 0;
         Resources.gunpowder = 0;
         BattleMovement.paused = false;
-        Game.currentScene = "Map";
+        Game.currentScene = 0;
         SceneManager.LoadScene("Map");
     }
 }
