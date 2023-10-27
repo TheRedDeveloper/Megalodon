@@ -11,7 +11,7 @@ public class ShipwreckTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player") {
-            Game.currentScene = "Shipwreck";
+            Game.currentScene = 1;
             Game.shipwreckId = shipwreckId;
             Game.mapPosition = exitPoint.position;
             SceneManager.LoadScene("Shipwreck"+shipwreckId);
