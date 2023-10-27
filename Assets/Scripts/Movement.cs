@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+using UnityEngine.SceneManagement;
+
 
 public class Movement : MonoBehaviour {
     public float RotationSpeed = 2;
     public float RotationHardness = 22.5f;
-    public float TranslationSpeed = 2;
+    public float TranslationSpeed = 1;
     public float slowdownFactor = .5f;
     public Sprite spriteL2;
     public SpriteRenderer spriteRenderer;
@@ -23,12 +25,13 @@ public class Movement : MonoBehaviour {
         instance = FMODUnity.RuntimeManager.CreateInstance("event:/UB_Loop");
         instance.start();
     }
-    void OnDestroy()
-    {
+    void OnDestroy(){
+        Debug.Log("DESTROY");
+        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         instance.release();
     }
 
-    void FixedUpdate(){
+    void Update(){
         isMoving = Input.GetAxisRaw("Vertical") != 0f || Input.GetAxisRaw("Horizontal") != 0f;
         if(!PlayerSprite) Debug.LogError("Movement kann PlayerSprite nicht finden.");
         float speedCoeff = 1;
@@ -37,18 +40,16 @@ public class Movement : MonoBehaviour {
         rb.AddTorque(Input.GetAxisRaw("Horizontal") * Time.deltaTime * -RotationSpeed * rb.inertia, ForceMode2D.Impulse);
         speedCoeff = 1;
         if(Input.GetAxisRaw("Horizontal") != 0f | Input.GetAxisRaw("Vertical") < 0f) speedCoeff = slowdownFactor;
-        rb.velocity += (Vector2)(Quaternion.AngleAxis(transform.eulerAngles.z, Vector3.forward) * Vector3.up * Time.fixedDeltaTime
-        * TranslationSpeed * Input.GetAxisRaw("Vertical") * speedCoeff);
-        if (isMoving && !soundIsPlaying)
-            {
-                instance.setParameterByName("Speed", 1);
-                soundIsPlaying = true;
-            }
-        if (!isMoving && soundIsPlaying)
-            {
-                instance.setParameterByName("Speed", 0);
-                soundIsPlaying = false;
-            }  
+        rb.velocity += (Vector2)(Quaternion.AngleAxis(transform.eulerAngles.z, Vector3.forward) * Vector3.up * Time.deltaTime
+        * TranslationSpeed * Input.GetAxisRaw("Vertical") * speedCoeff * 10);
+        if (isMoving && !soundIsPlaying){
+            instance.setParameterByName("Speed", 1);
+            soundIsPlaying = true;
+        }
+        if (!isMoving && soundIsPlaying){
+            instance.setParameterByName("Speed", 0);
+            soundIsPlaying = false;
+        }  
 
     }
 
