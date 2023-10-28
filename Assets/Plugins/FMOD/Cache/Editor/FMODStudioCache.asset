@@ -70,10 +70,10 @@ MonoBehaviour:
   Path: FMOD Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638340120124753067
+  lastModified: 638340775681247581
   FileSizes:
   - Name: Desktop
-    Value: 1336
+    Value: 1418
   Exists: 1
 --- !u!114 &-6647835290843323178
 MonoBehaviour:
@@ -197,11 +197,38 @@ MonoBehaviour:
   Path: FMOD Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638340172939180952
+  lastModified: 638340775681147826
   FileSizes:
   - Name: Desktop
-    Value: 2847680
+    Value: 3243136
   Exists: 1
+--- !u!114 &-2976246821314206696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Open_Chest
+  m_EditorClassIdentifier: 
+  Path: event:/Open_Chest
+  Guid:
+    Data1: -1847408250
+    Data2: 1171246431
+    Data3: -615231324
+    Data4: 1898107781
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2326
 --- !u!114 &-2873049590525538252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +310,8 @@ MonoBehaviour:
   - {fileID: -2873049590525538252}
   - {fileID: 2402530333600106754}
   - {fileID: 7479202684515102430}
+  - {fileID: -2976246821314206696}
+  - {fileID: 5382134402496531257}
   EditorParameters:
   - {fileID: -5598429905871205811}
   - {fileID: -6402437612727756711}
@@ -290,7 +319,7 @@ MonoBehaviour:
   - {fileID: -4200161945832366747}
   StringsBanks:
   - {fileID: -7547040716807997081}
-  cacheTime: 638340172939180952
+  cacheTime: 638340775681247581
   cacheVersion: 131608
 --- !u!114 &142408575672480393
 MonoBehaviour:
@@ -398,6 +427,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5382134402496531257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Chest_Tone
+  m_EditorClassIdentifier: 
+  Path: event:/Chest_Tone
+  Guid:
+    Data1: -276774481
+    Data2: 1307385117
+    Data3: -8404858
+    Data4: -623057328
+  Banks:
+  - {fileID: -4200161945832366747}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 25500
 --- !u!114 &6206709591789808195
 MonoBehaviour:
   m_ObjectHideFlags: 0
